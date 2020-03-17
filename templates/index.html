@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+</head>
+<body>
+<div>
+    <h1>Predict chronicle kidney disease</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="age" placeholder="age" required="required">
+        <input type="text" name="bp" placeholder="bp" required="required">
+        <input type="text" name="al" placeholder="al" required="required">
+        <input type="text" name="pcc" placeholder="pcc" required="required">
+        <input type="text" name="bgr" placeholder="bgr" required="required">
+        <input type="text" name="bu" placeholder="bu" required="required">
+        <input type="text" name="sod" placeholder="sod" required="required">
+        <input type="text" name="pot" placeholder="pot" required="required">
+        <input type="text" name="hemo" placeholder="hemo" required="required">
+        <input type="text" name="rbcc" placeholder="rbcc" required="required">
+        <input type="text" name="dm" placeholder="dm" required="required">
+        <input type="text" name="appet" placeholder="appet" required="required">
+        <button type="submit"> Predict</button>
+    </form>
+    <br>
+    <br>
+    {{prediction_text}}
+</div>
+
+</body>
+</html>
