@@ -13,7 +13,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict', methods=['get'])
+@app.route('/predict', methods=['GET'])
 def predict():
     # print(int(request.args['age']))
     # int_features = [float(x) for x in request.form.values()]
