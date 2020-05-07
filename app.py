@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 from flask import make_response
 
-app = Flask(__name__)
+app= Flask(__name__)
 model = pickle.load(open('venv/model.pkl', 'rb'))
 
 

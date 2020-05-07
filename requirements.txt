@@ -9,6 +9,3 @@ scipy>=0.15.1
 scikit-learn>=0.18
 matplotlib>=1.4.3
 pandas>=0.19
-Flask-WTF==0.9.4
-WTForms==1.0.5
-Flask_RESTful==0.2.12
