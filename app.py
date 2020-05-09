@@ -34,11 +34,14 @@ def predict():
     pred = (prediction[0][0] * 0.96)
 
     if pred > 0.75:
-        result_prediction = 'Don\'t worry you have ' + str((1 - pred) * 100) + '% precentage to have chronicle kidney disease. We have 99.06% confident for say that !! '
+        result_prediction = 'Don\'t worry you have ' + str((
+                                                                       1 - pred) * 100) + '% precentage to have chronicle kidney disease. We have 99.06% confident for say that !! '
     elif (pred > 0.5):
-        result_prediction = 'You are in some denger zone. You have ' + str((1 - pred) * 100) + '% percentae to have chronicle kidney disease. We have 99.06% confident for say that !! Care full'
+        result_prediction = 'You are in some denger zone. You have ' + str((
+                                                                                       1 - pred) * 100) + '% percentae to have chronicle kidney disease. We have 99.06% confident for say that !! Care full'
     else:
-        result_prediction = 'You are in very danger zone.You have ' + str((1 - pred) * 100) + '% percentae to have chronicle kidney disease. We have 99.06% confident for say that !! Meet your doctor as soon as possible'
+        result_prediction = 'You are in very danger zone.You have ' + str((
+                                                                                      1 - pred) * 100) + '% percentae to have chronicle kidney disease. We have 99.06% confident for say that !! Meet your doctor as soon as possible'
     res = {
         "fulfillmentText": result_prediction
     }
@@ -46,6 +49,7 @@ def predict():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
+
 
 if __name__ == "__main__":
     app.run(debug=True)
