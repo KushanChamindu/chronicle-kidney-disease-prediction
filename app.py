@@ -6,7 +6,8 @@ import pickle
 from flask import make_response
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 
 @app.route('/')
