@@ -2,11 +2,11 @@
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import json
-# import pickle
+import pickle
 from flask import make_response
 
 app = Flask(__name__)
-# model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 
 @app.route('/')
@@ -29,7 +29,7 @@ def predict():
          'sod': [float(int_features['sod']) / 164], 'pot': [float(int_features['pot']) / 130.1],
          'hemo': [float(int_features['hemo']) / 21.7], 'rbcc': [float(int_features['rbcc']) / 12.8],
          'dm': [float(int_features['dm'])], 'appet': [float(int_features['appet'])]})
-    prediction = 1#model.predict(final_features)
+    prediction = model.predict(final_features)
     print(prediction[0][0])
     pred = (prediction[0][0] * 0.96)
 
