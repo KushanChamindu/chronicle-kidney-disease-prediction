@@ -41,7 +41,7 @@ def predict():
         result_prediction = 'You are in some denger zone. You have ' + str((
                                                                                        1 - pred) * 100) + '% percentae to have chronicle kidney disease. We have 99.06% confident for say that !! Care full'
     else:
-        result_prediction = 'You are in very danger zone.You have ' + str((
+        result_prediction = 'You are in very danger zone. You have ' + str((
                                                                                       1 - pred) * 100) + '% percentae to have chronicle kidney disease. We have 99.06% confident for say that !! Meet your doctor as soon as possible'
     res = {
         "fulfillmentText": result_prediction
